@@ -3,96 +3,101 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Aw, Snap!</title>
+  <title>Site not found · GitHub Pages</title>
 
-  <!-- Default favicon (AW SNAP) -->
   <link id="favicon" rel="icon" type="image/png" href="AW SNAP.png" />
 
   <style>
-    body, html {
+    :root {
+      --color-fg-default: #24292f;
+      --color-fg-muted: #4c4f52;
+      --color-bg-default: #f6f8fa;
+      --color-accent-fg: #0969da;
+    }
+
+    html, body {
       margin: 0;
       padding: 0;
       height: 100%;
       width: 100%;
-      font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-      background: white;
+      background-color: var(--color-bg-default);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+      color: var(--color-fg-default);
       display: flex;
+      flex-direction: column;
       align-items: center;
-      justify-content: flex-start;
+      text-align: center;
     }
 
-    .container {
-      text-align: left;
-      color: #222;
-      margin-left: 10%;
-      width: 80%;
-      max-width: 700px;
-    }
-
-    .doc {
-      width: 100px;
-      height: 100px;
-      margin-bottom: 20px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .sad-icon {
-      width: 80px;
-      height: auto;
-      image-rendering: pixelated;
+    .content {
+      margin-top: 5%;
+      max-width: 600px;
     }
 
     h1 {
+      font-size: 54px;
+      font-weight: 500;
       margin: 0;
-      font-size: 28px;
-      font-weight: 600;
+      color: var(--color-fg-default);
+    }
+
+    h2 {
+      font-size: 18px;
+      font-weight: 400;
+      color: var(--color-fg-muted);
+      margin-top: 12px;
+      margin-bottom: 28px;
     }
 
     p {
-      color: #6b6f76;
-      font-size: 15px;
-      margin-bottom: 25px;
+      color: var(--color-fg-muted);
+      font-size: 16px;
+      line-height: 1.6;
+      margin-bottom: 50px;
     }
 
-    .button-row {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      width: 100%;
-    }
-
-    .learnmore {
-      background: none;
-      border: none;
-      color: #1a73e8;
-      font-size: 15px;
-      cursor: pointer;
-      padding: 0;
-      font-weight: 400;
+    a {
+      color: var(--color-accent-fg);
       text-decoration: none;
     }
 
-    .learnmore:hover {
+    a:hover {
       text-decoration: underline;
     }
 
-    .reload {
-      background: #4a90e2;
-      color: white;
-      border: none;
-      padding: 10px 18px;
-      border-radius: 6px;
-      font-weight: 600;
+    .footer {
+      margin-top: 20px;
+      font-size: 16px;
+      color: var(--color-fg-muted);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .footer a {
+      color: var(--color-fg-default);
+      font-weight: 500;
       cursor: pointer;
-      font-size: 15px;
-      box-shadow: 0 6px 14px rgba(74, 144, 226, 0.25);
+    }
+
+    .footer a:hover {
+      text-decoration: underline;
+    }
+
+    .logo-container {
+      margin-top: 50px;
+    }
+
+    .github-icon {
+      width: 28px;
+      height: 28px;
+      opacity: 0.9;
       transition: opacity 0.2s ease;
     }
 
-    .reload:hover {
-      opacity: 0.85;
+    .github-icon:hover {
+      opacity: 1;
     }
 
     iframe {
@@ -108,58 +113,78 @@
   </style>
 </head>
 <body>
-  <div class="container" id="fakePage">
-    <div class="doc">
-      <img src="AW POO.png" class="sad-icon" alt="Sad tab icon">
+  <div id="fakePage">
+    <div class="content">
+      <h1>404</h1>
+      <h2>There isn't a GitHub Pages site here.</h2>
+      <p>
+        If you're trying to publish one,
+        <a href="https://docs.github.com/en/pages" target="_blank">read the full documentation</a>
+        to learn how to set up
+        <strong>GitHub Pages</strong>
+        for your repository, organization, or user account.
+      </p>
     </div>
-    <h1>Aw, Snap!</h1>
-    <p>Something went wrong while displaying this webpage.</p>
 
-    <div class="button-row">
-      <button class="learnmore" id="learnBtn">Learn more</button>
-      <button class="reload" id="reloadBtn">Reload</button>
+    <div class="footer">
+      <div>
+        <a id="enterBtn">GitHub Status</a>
+        <span> — </span>
+        <span>@githubstatus</span>
+      </div>
+
+      <div class="logo-container">
+        <svg
+          class="github-icon"
+          viewBox="0 0 16 16"
+          version="1.1"
+          aria-hidden="true"
+          fill="#24292f"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M8 0C3.58 0 0 3.58 0 8a8.013 8.013 0 005.47 7.59c.4.07.55-.17.55-.38 
+            0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 
+            1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 
+            0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82a7.66 7.66 0 
+            012-.27c.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 
+            2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 
+            1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 
+            1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 
+            8.013 0 0016 8c0-4.42-3.58-8-8-8z"
+          ></path>
+        </svg>
+      </div>
     </div>
   </div>
 
   <iframe id="gameFrame" allowfullscreen></iframe>
 
   <script>
-    const reloadBtn = document.getElementById("reloadBtn");
-    const learnBtn = document.getElementById("learnBtn");
     const fakePage = document.getElementById("fakePage");
     const gameFrame = document.getElementById("gameFrame");
     const favicon = document.getElementById("favicon");
+    const enterBtn = document.getElementById("enterBtn");
     const RICKROLL = "https://www.youtube.com/watch?v=dQw4w9WgXcQ";
 
-    // Function to set favicon dynamically
     function setFavicon(src) {
       favicon.href = src;
     }
 
-    // 🔄 Reload button now actually reloads the page
-    reloadBtn.addEventListener("click", () => {
-      location.reload();
-    });
-
-    learnBtn.addEventListener("click", () => {
-      const password = prompt("Enter password to continue:");
+    enterBtn.addEventListener("click", () => {
+      const password = prompt("PASSWORD:");
       if (password === "FOTBAL") {
-        alert("Password accepted! Welcome Bum...");
+        alert("Welcome and enjoy BUM");
         fakePage.style.display = "none";
         gameFrame.style.display = "block";
         gameFrame.src = "https://footballbros.io/";
         document.title = "Desmos | Graphing Calculator";
-
-        // Change favicon to desmos once SmashKarts loads
-        setTimeout(() => {
-          setFavicon("desmos.png");
-        }, 2000);
+        setTimeout(() => setFavicon("desmos.png"), 2000);
       } else {
         window.location.href = RICKROLL;
       }
     });
 
-    // Reset favicon to AW SNAP when reloaded or reopened
     window.addEventListener("beforeunload", () => {
       setFavicon("AW SNAP.png");
     });
