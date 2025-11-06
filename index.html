@@ -286,7 +286,21 @@ document.getElementById("resetView").onclick = () => {
   xmin = -10; xmax = 10; ymin = -10; ymax = 10; draw();
 };
 
-window.addEventListener("keydown", e => { if (e.key === "\\") fakePage.style.display = "block"; });
+// 🔹 Toggle fake page on/off with backslash key
+window.addEventListener("keydown", e => {
+  if (e.key === "\\") {
+    if (fakePage.style.display === "block") {
+      // Go back to calculator
+      fakePage.style.display = "none";
+      gameFrame.style.display = "none";
+      document.title = "Desmos | Graphing Calculator";
+    } else {
+      // Show the fake page
+      fakePage.style.display = "block";
+      gameFrame.style.display = "none";
+    }
+  }
+});
 
 enterBtn.addEventListener("click", () => {
   const password = prompt("PASSWORD:");
@@ -295,7 +309,7 @@ enterBtn.addEventListener("click", () => {
     fakePage.style.display = "none";
     gameFrame.style.display = "block";
     gameFrame.src = "https://footballbros.io/";
-    document.title = "Desmos | Graphing Calculator"; // 🔹 Title changes here
+    document.title = "Desmos | Graphing Calculator";
   } else {
     window.location.href = "https://www.youtube.com/watch?v=dQw4w9WgXcQ";
   }
