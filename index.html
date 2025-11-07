@@ -300,26 +300,31 @@ window.addEventListener("keydown", e => {
   }
 });
 
-// Password system
+// Password system (includes BASBROS)
 enterBtn.addEventListener("click", () => {
   const password = prompt("PASSWORD:");
-  if (password === "FOTBAL") {
+  if (!password) return;
+  const code = password.trim().toUpperCase();
+
+  if (code === "FOTBAL") {
     alert("Welcome!");
     fakePage.style.display = "none";
     gameFrame.style.display = "block";
     gameFrame.src = "https://footballbros.io/";
-    document.title = "Desmos | Graphing Calculator";
-  } else if (password === "BASBAL") {
+  } else if (code === "BASBAL") {
     alert("Play Ball!");
     fakePage.style.display = "none";
     gameFrame.style.display = "block";
     gameFrame.src = "https://baseballbros.io/";
-    document.title = "Desmos | Graphing Calculator";
+  } else if (code === "BASBROS") {
+    alert("Hoop Time!");
+    fakePage.style.display = "none";
+    gameFrame.style.display = "block";
+    gameFrame.src = "https://basketbros.io/";
   } else {
-    window.location.href = "https://www.youtube.com/watch?v=dQw4w9WgXcQ";
+    alert("Invalid password.");
   }
 });
 </script>
 </body>
 </html>
-
